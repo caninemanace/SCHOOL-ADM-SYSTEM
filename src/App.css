@@ -1,3 +1,4 @@
+
 * {
     background-color: rgb(255, 255, 255);
   }
@@ -15,6 +16,8 @@ nav {
   .nav-link {
     font-size: 18px;
     font-weight: 500;
+
+
     color: #000000;
     text-decoration: none;
     margin-bottom: 15px; 
@@ -25,5 +28,32 @@ nav {
  
   .nav-link:hover {
     color: #007bff;
+  }
+  .studForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+
+    border-radius: 68px;
+    height: 500px;
+    border: 1px black solid;
+    
+  }
+  
+  .studForm label {
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    
+  }
+  
+  .studForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   

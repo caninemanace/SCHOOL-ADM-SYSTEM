@@ -3,7 +3,9 @@ import './App.css';
 import NavBar from './NavBar'; // Optional: Remove if not using
 import StudentCard from './StudentCard';
 
+
 function Applicants() {
+
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
