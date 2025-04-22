@@ -13,5 +13,6 @@ function StudentCard({ students }) {
       </>
     );
   }
-
+  
   export default StudentCard;
+  

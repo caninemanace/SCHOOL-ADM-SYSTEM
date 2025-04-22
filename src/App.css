@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(27, 3, 3);
+    background-color: rgb(255, 255, 255);
   }
 /* Styles for the NavBar */
 nav {
@@ -15,7 +15,7 @@ nav {
   .nav-link {
     font-size: 18px;
     font-weight: 500;
-    color: #e1d5d5;
+    color: #000000;
     text-decoration: none;
     margin-bottom: 15px; 
     transition: color 0.3s ease;

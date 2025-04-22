@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-import NavBar from './NavBar'
-import StudentCard from './StudentCard'
+import { useState, useEffect } from 'react';
+import './App.css';
+import NavBar from './NavBar'; // Optional: Remove if not using
+import StudentCard from './StudentCard';
 
 function Applicants() {
   const [students, setStudents] = useState([]);
@@ -15,9 +15,10 @@ function Applicants() {
 
   return (
     <>
-      <NavBar />
+      <NavBar /> {/* Optional: comment/remove if not implemented */}
+      <h1>Applicants Table</h1>
       <div>
-        <table border="1" cellPadding="10">
+        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
             <tr>
               <th>Admission No</th>
