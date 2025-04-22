@@ -1,0 +1,53 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "name": "George kangethe",
+        "phone": "0786578432",
+        "email": "georgekangethe@gmail.com",
+        "image": "./images/gorg.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Maxwell Githinji",
+        "phone": "0778856432",
+        "email": "maxwellgithinji@gmail.com",
+         "image": "./images/gorg.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Mary njoki",
+        "phone": "0700987267",
+        "email": "marynjoki@gmail.com",
+         "image": "./images/gorg.jpg"
+      },
+      {
+        "name": "Telvin Kamau",
+        "phone": "0713659365",
+        "email": "telvinkamau@gmail.com",
+         "image": "./images/gorg.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Kelvin Mwangi",
+        "phone": "0709785673",
+        "email": "kelvinmwangi@gmail.com",
+         "image": "./images/gorg.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Wewe Nani",
+        "phone": "0756728652",
+        "email": "wewenani@gmail.com",
+         "image": "./images/gorg.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Unatoka Wapi",
+        "phone": "0778856432",
+        "email": "unatokawapi@gmail.com",
+         "image": "./images/gorg.jpg"
+      }
+    ]
+  }
+  
