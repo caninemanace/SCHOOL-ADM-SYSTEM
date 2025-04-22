@@ -1,12 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 import NavBar from './NavBar'
+import StudentCard from './StudentCard'
 
 function Applicants() {
-    return(
-        <NavBar/>
-    )
+  const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/students")
+      .then((res) => res.json())
+      .then((data) => setStudents(data))
+      .catch((err) => console.error("Error fetching students:", err));
+  }, []);
+
+  return (
+    <>
+      <NavBar />
+      <div>
+        <table border="1" cellPadding="10">
+          <thead>
+            <tr>
+              <th>Admission No</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <StudentCard students={students} />
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
 }
+
 export default Applicants;
