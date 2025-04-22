@@ -7,10 +7,10 @@ import NavBar from './NavBar'
 
 function Applicants() {
     return(
-        <>
+     
         <NavBar/>
         
-        </>
+    
         
     )
 }
