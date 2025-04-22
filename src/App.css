@@ -1,4 +1,8 @@
 
+* {
+    background-color: rgb(255, 255, 255);
+  }
+/* Styles for the NavBar */
 nav {
     display: flex;
     flex-direction: row; 
@@ -12,7 +16,9 @@ nav {
   .nav-link {
     font-size: 18px;
     font-weight: 500;
-    color: rgb(8, 1, 1);
+
+
+    color: #000000;
     text-decoration: none;
     margin-bottom: 15px; 
     transition: color 0.3s ease;
