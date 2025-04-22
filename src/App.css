@@ -1,7 +1,10 @@
-* {
-    background-color: rgb(27, 3, 3);
+BODY {
+    /* background-color:
+    #C5BAFF; */
+    /* color:white; */
   }
-/* Styles for the NavBar */
+/* Styles for the NavBar
+#C4D9FF */
 nav {
     display: flex;
     flex-direction: row; 
@@ -15,7 +18,7 @@ nav {
   .nav-link {
     font-size: 18px;
     font-weight: 500;
-    color: #e1d5d5;
+    color: rgb(8, 1, 1);
     text-decoration: none;
     margin-bottom: 15px; 
     transition: color 0.3s ease;
@@ -25,5 +28,32 @@ nav {
  
   .nav-link:hover {
     color: #007bff;
+  }
+  .studForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color:#C4D9FF; */
+    border-radius: 68px;
+    height: 500px;
+    border: 1px black solid;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .studForm label {
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    
+  }
+  
+  .studForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
