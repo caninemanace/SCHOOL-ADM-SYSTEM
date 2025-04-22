@@ -1,3 +1,29 @@
-body{
-  background-color: black;
-}
+* {
+    background-color: rgb(27, 3, 3);
+  }
+/* Styles for the NavBar */
+nav {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end; 
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+   
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e1d5d5;
+    text-decoration: none;
+    margin-bottom: 15px; 
+    transition: color 0.3s ease;
+    padding: 20px; 
+  }
+  
+ 
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
