@@ -1,70 +1,6 @@
 {
   "students": [
     {
-      "id": "ab32",
-      "name": "George Kangethe",
-      "phone": "0786578432",
-      "email": "georgekangethe@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "39je",
-      "name": "Maxwell Githinji",
-      "phone": "0778856432",
-      "email": "maxwellgithinji@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "dccn",
-      "name": "Mary Njoki",
-      "phone": "0700987267",
-      "email": "marynjoki@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "wdjw",
-      "name": "Telvin Kamau",
-      "phone": "0713659365",
-      "email": "telvinkamau@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "2ehr4",
-      "name": "Kelvin Mwangi",
-      "phone": "0709785673",
-      "email": "kelvinmwangi@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "eene3",
-      "name": "Wewe Nani",
-      "phone": "0756728652",
-      "email": "wewenani@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "238e",
-      "name": "Unatoka Wapi",
-      "phone": "0778856432",
-      "email": "unatokawapi@gmail.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
-      "id": "db0c",
-      "name": "Eddie Karuiki",
-      "phone": "0759502229",
-      "email": "eddie.njoroge@student.moringaschool.com",
-      "image": "./images/gorg.jpg",
-      "fee": "0"
-    },
-    {
       "id": "af21",
       "name": "Tevin Rutere",
       "phone": "0712345678",
@@ -85,6 +21,102 @@
       "name": "Mwanafunzi Wanafunzi",
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "d08f",
+      "name": "Kariuki Kamau",
+      "phone": "0759502229",
+      "email": "tevin1234@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "e132",
+      "name": "Murima Makwetu",
+      "phone": "0712345678",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "25e0",
+      "name": "Kristina Mwetu",
+      "phone": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "9a64",
+      "name": "Joe Mwangi",
+      "phone": "0712345678",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "801f",
+      "name": "CANINEMANACE",
+      "phone": "0759502229",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "8174",
+      "name": "Eddie Karuiki",
+      "phone": "0759502229",
+      "email": "eddie.njoroge2306@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "acad",
+      "name": "Joe Mwangi",
+      "phone": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "0194",
+      "name": "Eddie Karuiki",
+      "phone": "0712345678",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "11a8",
+      "name": "Eddie Karuiki",
+      "phone": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "b858",
+      "name": "Eddie Karuiki",
+      "phone": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "72a6",
+      "name": "Eddie Karuiki",
+      "phone": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "5fce",
+      "name": "Joe Mwangi",
+      "phone": "0759502229",
+      "email": "eddie.njoroge2306@gmail.com",
       "fee": "0",
       "image": "./images/gorg.jpg"
     }
