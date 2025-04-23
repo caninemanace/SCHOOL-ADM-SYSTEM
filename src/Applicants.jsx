@@ -5,6 +5,7 @@ import StudentCard from './StudentCard';
 
 function Applicants() {
   const [students, setStudents] = useState([]);
+  const [editingStudent, setEditingStudent] = useState(null); // State for editing
 
   useEffect(() => {
     fetch("http://localhost:3000/students")
@@ -26,28 +27,134 @@ function Applicants() {
       .catch((err) => console.error("Delete error:", err));
   };
 
+  const handleEdit = (student) => {
+    setEditingStudent(student); // Set the student to be edited
+  };
+
+  const handleUpdate = (updatedStudent) => {
+    fetch(`http://localhost:3000/students/${updatedStudent.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedStudent),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to update");
+        return res.json();
+      })
+      .then((data) => {
+        setStudents((prevStudents) =>
+          prevStudents.map((student) =>
+            student.id === data.id ? data : student
+          )
+        );
+        setEditingStudent(null); // Clear the editing state
+      })
+      .catch((err) => console.error("Update error:", err));
+  };
+
   return (
     <>
       <NavBar />
       <h1>APPLICATION TABLE</h1>
       <div>
-        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead>
-            <tr>
-              <th>Admission No</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>ADM-Fee (ksh)</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <StudentCard students={students} onDelete={handleDelete} />
-          </tbody>
-        </table>
+        {editingStudent ? (
+          <EditForm
+            student={editingStudent}
+            onUpdate={handleUpdate}
+            onCancel={() => setEditingStudent(null)} // Cancel editing
+          />
+        ) : (
+          <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th>Admission No</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>ADM-Fee (ksh)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <StudentCard
+                students={students}
+                onDelete={handleDelete}
+                onEdit={handleEdit} // Pass the edit handler
+              />
+            </tbody>
+          </table>
+        )}
       </div>
     </>
+  );
+}
+
+function EditForm({ student, onUpdate, onCancel }) {
+  const [formData, setFormData] = useState({ ...student });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onUpdate(formData); // Call the update handler
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
+      <h2>Edit Student</h2>
+      <div>
+        <label>ID:</label>
+        <input type="text" value={formData.id} disabled />
+      </div>
+      <div>
+        <label>Name:</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>Phone:</label>
+        <input
+          type="text"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>Fee:</label>
+        <input
+          type="number"
+          name="fee"
+          value={formData.fee}
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit">Update</button>
+      <button type="button" onClick={onCancel}>
+        Cancel
+      </button>
+    </form>
   );
 }
 
