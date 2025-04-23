@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './NavBar'; // Optional: Remove if not using
 import StudentCard from './StudentCard';
-
+import Form from './Form';
 
 function Applicants() {
 
@@ -14,6 +14,11 @@ function Applicants() {
       .then((data) => setStudents(data))
       .catch((err) => console.error("Error fetching students:", err));
   }, []);
+function onAddApplicants(newStudent){
+  
+
+}
+
 
   return (
     <>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavBar from "./NavBar";
+import Applicants from "./Applicants";
 
 function Form({onAddApplicants}){
     const [formData, setFormData] =useState({
@@ -66,7 +67,7 @@ function Form({onAddApplicants}){
                 onChange={handleChange}
                 /><br /><br /><br />
 
-                <button type="submit" className="bw-btn">SUBMIT</button>
+                <button type="submit" className="bw-btn" onClick={handleSubmit}>SUBMIT</button>
 
             </form>
 
