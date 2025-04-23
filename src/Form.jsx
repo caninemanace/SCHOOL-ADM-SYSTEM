@@ -67,7 +67,7 @@ function Form() {
         phone: formData.contact,
         email: formData.email,
         fee: "0",
-        image: "./images/gorg.jpg" // you can remove this if not needed
+        image: "./images/gorg.jpg" 
       })
     })
       .then((res) => res.json())
@@ -81,34 +81,38 @@ function Form() {
   return (
     <>
       <NavBar />
-      <form className="studForm" onSubmit={handleSubmit}>
-        <label>Name</label>
+      <form className="form-wrapper" onSubmit={handleSubmit} >
+      <h2 className="form-heading">STUDENT REGISTRATION FORM</h2>
+        <label className="form-heading">NAME:</label>
         <input
           type="text"
           name="name"
           placeholder="Joe"
           value={formData.name}
           onChange={handleChange}
+          className="styled-form input"
         />
         {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
 
-        <label>Contact</label>
+        <label className="form-heading">CONTACT:</label>
         <input
           type="text"
           name="contact"
           placeholder="07** *** ****"
           value={formData.contact}
           onChange={handleChange}
+          className="styled-form input"
         />
         {errors.contact && <p style={{ color: "red" }}>{errors.contact}</p>}
 
-        <label>Email</label>
+        <label className="form-heading">EMAIL:</label>
         <input
           type="email"
           name="email"
           placeholder="joe@gmail.com"
           value={formData.email}
           onChange={handleChange}
+          className="styled-form input"
         />
         {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
 

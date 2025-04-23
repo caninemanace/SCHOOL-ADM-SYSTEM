@@ -33,33 +33,32 @@ nav {
     color: #007bff;
   }
 
-  .studForm {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 30px auto;
-    padding: 20px;
 
-    border-radius: 68px;
-    height: 500px;
-    border: 1px black solid;
-    
-  }
-  
-  .studForm label {
-    padding: 12px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-    
-  }
-  
-  .studForm input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+/* Background for the whole form wrapper */
+.form-wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff; /* white background */
+  border: 1px solid #000; /* black border */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Increased space between inputs */
+}
+
+/* Heading style */
+.form-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: x-large;
+  font-weight: 700;
+}
+input{
+  font-size: x-large;
+}
+
   .bw-btn {
     background-color: white;
     color: black;
@@ -70,11 +69,55 @@ nav {
     font-size: 16px;
     cursor: pointer;
   }
-
-  .bw-btn:hover {
-    background-color: black;
-    color: #ffffff;
+  .bw-btn:hover{
+    background-color: #333;
+    color: #fff;
   }
+
+  .instructions-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro-text {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-line {
+    border: none;
+    border-top: 2px solid black;
+    margin: 2rem 0;
+  }
+  
+  .instructions-container h2 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .instructions-container ul,
+  .instructions-container ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .summary-box {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  
   
   
   
