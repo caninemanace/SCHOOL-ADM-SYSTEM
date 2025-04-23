@@ -119,6 +119,22 @@
       "email": "eddie.njoroge2306@gmail.com",
       "fee": "0",
       "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "db77",
+      "name": "CANINEMANACE",
+      "phone": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
+    },
+    {
+      "id": "94a7",
+      "name": "Eddie Maxwell",
+      "phone": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg"
     }
   ]
 }

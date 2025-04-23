@@ -55,12 +55,12 @@ form {
     color: rgb(0, 0, 0);
   }
   
-  /* Add hover effects for buttons */
+  
   form button:hover {
     opacity: 0.9;
   }
   
-  /* Add responsive styling */
+ 
   @media (max-width: 600px) {
     form {
       padding: 15px;
@@ -72,3 +72,4 @@ form {
       margin-bottom: 10px;
     }
   }
+  

@@ -5,7 +5,8 @@ import StudentCard from './StudentCard';
 
 function Applicants() {
   const [students, setStudents] = useState([]);
-  const [editingStudent, setEditingStudent] = useState(null); // State for editing
+  const [editingStudent, setEditingStudent] = useState(null); 
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   useEffect(() => {
     fetch("http://localhost:3000/students")
@@ -28,7 +29,7 @@ function Applicants() {
   };
 
   const handleEdit = (student) => {
-    setEditingStudent(student); // Set the student to be edited
+    setEditingStudent(student); 
   };
 
   const handleUpdate = (updatedStudent) => {
@@ -49,21 +50,40 @@ function Applicants() {
             student.id === data.id ? data : student
           )
         );
-        setEditingStudent(null); // Clear the editing state
+        setEditingStudent(null); 
       })
       .catch((err) => console.error("Update error:", err));
   };
+
+  const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <>
       <NavBar />
       <h1>APPLICATION TABLE</h1>
       <div>
+        
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{
+            marginBottom: "20px",
+            padding: "10px",
+            width: "100%",
+            maxWidth: "400px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+          }}
+        />
         {editingStudent ? (
           <EditForm
             student={editingStudent}
             onUpdate={handleUpdate}
-            onCancel={() => setEditingStudent(null)} // Cancel editing
+            onCancel={() => setEditingStudent(null)} 
           />
         ) : (
           <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -79,9 +99,9 @@ function Applicants() {
             </thead>
             <tbody>
               <StudentCard
-                students={students}
+                students={filteredStudents} 
                 onDelete={handleDelete}
-                onEdit={handleEdit} // Pass the edit handler
+                onEdit={handleEdit} 
               />
             </tbody>
           </table>
@@ -104,7 +124,7 @@ function EditForm({ student, onUpdate, onCancel }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onUpdate(formData); // Call the update handler
+    onUpdate(formData); 
   };
 
   return (
