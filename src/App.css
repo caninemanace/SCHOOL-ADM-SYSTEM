@@ -23,12 +23,16 @@ nav {
     margin-bottom: 15px; 
     transition: color 0.3s ease;
     padding: 20px; 
+    font-size: xx-large;
   }
   
- 
   .nav-link:hover {
     color: #007bff;
   }
+  .active{
+    color: #007bff;
+  }
+
   .studForm {
     display: flex;
     flex-direction: column;
@@ -56,4 +60,21 @@ nav {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  .bw-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 8px 16px;
+    margin-right: 20px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .bw-btn:hover {
+    background-color: black;
+    color: #ffffff;
+  }
+  
+  
   

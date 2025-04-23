@@ -17,17 +17,18 @@ function Applicants() {
 
   return (
     <>
-      <NavBar /> {/* Optional: comment/remove if not implemented */}
-      <h1>Applicants Table</h1>
+      <NavBar /> 
+      <h1>APPLICATION TABLE</h1>
       <div>
-        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
+        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse", }}>
           <thead>
             <tr>
               <th>Admission No</th>
               <th>Name</th>
               <th>Phone</th>
               <th>Email</th>
-              <th>Fee</th>
+              <th>ADM-Fee (ksh)</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
