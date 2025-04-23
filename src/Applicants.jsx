@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import NavBar from './NavBar'; // Optional: Remove if not using
+import NavBar from './NavBar';
 import StudentCard from './StudentCard';
-import Form from './Form';
 
 function Applicants() {
-
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
@@ -14,18 +12,13 @@ function Applicants() {
       .then((data) => setStudents(data))
       .catch((err) => console.error("Error fetching students:", err));
   }, []);
-function onAddApplicants(newStudent){
-  
-
-}
-
 
   return (
     <>
-      <NavBar /> 
+      <NavBar />
       <h1>APPLICATION TABLE</h1>
       <div>
-        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse", }}>
+        <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
             <tr>
               <th>Admission No</th>
