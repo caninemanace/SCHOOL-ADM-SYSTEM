@@ -13,6 +13,19 @@ function Applicants() {
       .catch((err) => console.error("Error fetching students:", err));
   }, []);
 
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3000/students/${id}`, {
+      method: "DELETE"
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to delete");
+        setStudents((prevStudents) =>
+          prevStudents.filter((student) => student.id !== id)
+        );
+      })
+      .catch((err) => console.error("Delete error:", err));
+  };
+
   return (
     <>
       <NavBar />
@@ -30,7 +43,7 @@ function Applicants() {
             </tr>
           </thead>
           <tbody>
-            <StudentCard students={students} />
+            <StudentCard students={students} onDelete={handleDelete} />
           </tbody>
         </table>
       </div>
