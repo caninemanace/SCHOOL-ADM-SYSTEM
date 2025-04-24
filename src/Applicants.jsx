@@ -7,12 +7,30 @@ function Applicants() {
   const [students, setStudents] = useState([]);
   const [editingStudent, setEditingStudent] = useState(null); 
   const [searchQuery, setSearchQuery] = useState(""); 
+  const [sortOrder, setSortOrder] = useState(""); 
 
   useEffect(() => {
-    fetch("http://localhost:3000/students")
-      .then((res) => res.json())
-      .then((data) => setStudents(data))
-      .catch((err) => console.error("Error fetching students:", err));
+    const baseFee = 200000;
+    const minFee = 4000;
+
+    const fetchAndUpdateFees = () => {
+      fetch("http://localhost:3000/students")
+        .then((res) => res.json())
+        .then((data) => {
+          const updatedStudents = data.map(student => {
+            const reduction = Math.floor(Math.random() * (baseFee - minFee));
+            const newFee = baseFee - reduction;
+            return { ...student, fee: newFee };
+          });
+          setStudents(updatedStudents);
+        })
+        .catch((err) => console.error("Error fetching students:", err));
+    };
+
+    fetchAndUpdateFees(); // Initial fetch
+    const interval = setInterval(fetchAndUpdateFees, 30000); // Refresh every 30 sec
+
+    return () => clearInterval(interval); // Clean up
   }, []);
 
   const handleDelete = (id) => {
@@ -55,23 +73,31 @@ function Applicants() {
       .catch((err) => console.error("Update error:", err));
   };
 
-  const filteredStudents = students.filter((student) =>
-    student.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredStudents = students
+    .filter((student) =>
+      student.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortOrder === "lowToHigh") {
+        return a.fee - b.fee;
+      } else if (sortOrder === "highToLow") {
+        return b.fee - a.fee;
+      }
+      return 0;
+    });
 
   return (
     <>
       <NavBar />
       <h1>APPLICATION TABLE</h1>
       <div>
-        
         <input
           type="text"
           placeholder="Search by name..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           style={{
-            marginBottom: "20px",
+            marginBottom: "10px",
             padding: "10px",
             width: "100%",
             maxWidth: "400px",
@@ -79,6 +105,23 @@ function Applicants() {
             borderRadius: "4px",
           }}
         />
+
+        <select
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
+          style={{
+            marginBottom: "20px",
+            marginLeft: "10px",
+            padding: "10px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+          }}
+        >
+          <option value="">Sort by Fee</option>
+          <option value="lowToHigh">Fee: Low to High</option>
+          <option value="highToLow">Fee: High to Low</option>
+        </select>
+
         {editingStudent ? (
           <EditForm
             student={editingStudent}
