@@ -5,9 +5,9 @@ import StudentCard from './StudentCard';
 
 function Applicants() {
   const [students, setStudents] = useState([]);
-  const [editingStudent, setEditingStudent] = useState(null); 
-  const [searchQuery, setSearchQuery] = useState(""); 
-  const [sortOrder, setSortOrder] = useState(""); 
+  const [editingStudent, setEditingStudent] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     const baseFee = 200000;
@@ -27,10 +27,10 @@ function Applicants() {
         .catch((err) => console.error("Error fetching students:", err));
     };
 
-    fetchAndUpdateFees(); // Initial fetch
-    const interval = setInterval(fetchAndUpdateFees, 30000); // Refresh every 30 sec
+    fetchAndUpdateFees();
+    const interval = setInterval(fetchAndUpdateFees, 30000);
 
-    return () => clearInterval(interval); // Clean up
+    return () => clearInterval(interval);
   }, []);
 
   const handleDelete = (id) => {
@@ -47,7 +47,7 @@ function Applicants() {
   };
 
   const handleEdit = (student) => {
-    setEditingStudent(student); 
+    setEditingStudent(student);
   };
 
   const handleUpdate = (updatedStudent) => {
@@ -68,14 +68,15 @@ function Applicants() {
             student.id === data.id ? data : student
           )
         );
-        setEditingStudent(null); 
+        setEditingStudent(null);
       })
       .catch((err) => console.error("Update error:", err));
   };
 
   const filteredStudents = students
     .filter((student) =>
-      student.name.toLowerCase().includes(searchQuery.toLowerCase())
+      student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      student.course.toLowerCase().includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => {
       if (sortOrder === "lowToHigh") {
@@ -93,7 +94,7 @@ function Applicants() {
       <div>
         <input
           type="text"
-          placeholder="Search by name..."
+          placeholder="Search by name or course..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           style={{
@@ -126,7 +127,7 @@ function Applicants() {
           <EditForm
             student={editingStudent}
             onUpdate={handleUpdate}
-            onCancel={() => setEditingStudent(null)} 
+            onCancel={() => setEditingStudent(null)}
           />
         ) : (
           <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -136,15 +137,16 @@ function Applicants() {
                 <th>Name</th>
                 <th>Phone</th>
                 <th>Email</th>
+                <th>Course</th>
                 <th>ADM-Fee (ksh)</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <StudentCard
-                students={filteredStudents} 
+                students={filteredStudents}
                 onDelete={handleDelete}
-                onEdit={handleEdit} 
+                onEdit={handleEdit}
               />
             </tbody>
           </table>
@@ -167,7 +169,7 @@ function EditForm({ student, onUpdate, onCancel }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onUpdate(formData); 
+    onUpdate(formData);
   };
 
   return (
@@ -201,6 +203,15 @@ function EditForm({ student, onUpdate, onCancel }) {
           type="email"
           name="email"
           value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>Course:</label>
+        <input
+          type="text"
+          name="course"
+          value={formData.course}
           onChange={handleChange}
         />
       </div>

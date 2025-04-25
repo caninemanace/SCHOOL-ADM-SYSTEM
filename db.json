@@ -6,7 +6,8 @@
       "phone": "0712345678",
       "email": "tevin1234@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Aerospace Engineering (MEng)"
     },
     {
       "id": "9abd",
@@ -14,7 +15,8 @@
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Computer Science (BSc)"
     },
     {
       "id": "d26d",
@@ -22,7 +24,8 @@
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Medicine (MBBS)"
     },
     {
       "id": "d08f",
@@ -30,7 +33,8 @@
       "phone": "0759502229",
       "email": "tevin1234@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Mechanical Engineering (MEng)"
     },
     {
       "id": "e132",
@@ -38,7 +42,8 @@
       "phone": "0712345678",
       "email": "eddie.njoroge@student.moringaschool.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Electrical Engineering (BEng)"
     },
     {
       "id": "25e0",
@@ -46,7 +51,8 @@
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Nursing (BNurs)"
     },
     {
       "id": "9a64",
@@ -54,7 +60,8 @@
       "phone": "0712345678",
       "email": "eddie.njoroge@student.moringaschool.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Civil Engineering (MEng)"
     },
     {
       "id": "801f",
@@ -62,7 +69,8 @@
       "phone": "0759502229",
       "email": "eddie.njoroge@student.moringaschool.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Graphic Design (BA)"
     },
     {
       "id": "8174",
@@ -70,7 +78,8 @@
       "phone": "0759502229",
       "email": "eddie.njoroge2306@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Information Technology (BSc)"
     },
     {
       "id": "acad",
@@ -78,7 +87,8 @@
       "phone": "0759502229",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Finance (BFin)"
     },
     {
       "id": "0194",
@@ -86,7 +96,8 @@
       "phone": "0712345678",
       "email": "eddie.njoroge@student.moringaschool.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Political Science (BA)"
     },
     {
       "id": "11a8",
@@ -94,7 +105,8 @@
       "phone": "0759502229",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Business Administration (BBA)"
     },
     {
       "id": "b858",
@@ -102,7 +114,8 @@
       "phone": "0759502229",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Architecture (BArch)"
     },
     {
       "id": "72a6",
@@ -110,7 +123,8 @@
       "phone": "0759502229",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Data Science (BSc)"
     },
     {
       "id": "5fce",
@@ -118,7 +132,8 @@
       "phone": "0759502229",
       "email": "eddie.njoroge2306@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Software Engineering (BSc)"
     },
     {
       "id": "db77",
@@ -126,13 +141,24 @@
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
       "fee": "0",
-      "image": "./images/gorg.jpg"
+      "image": "./images/gorg.jpg",
+      "course": "Journalism (BA)"
     },
     {
       "id": "94a7",
       "name": "Eddie Maxwell",
       "phone": "0712345678",
       "email": "joemwangi123@gmail.com",
+      "fee": "0",
+      "image": "./images/gorg.jpg",
+      "course": "Law (LLB)"
+    },
+    {
+      "id": "4476",
+      "name": "Raze Rantera",
+      "phone": "0746477122",
+      "email": "raze@rantera.com",
+      "course": "Aerospace Engineering (MEng)",
       "fee": "0",
       "image": "./images/gorg.jpg"
     }

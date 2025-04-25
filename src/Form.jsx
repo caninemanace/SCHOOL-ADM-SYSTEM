@@ -6,20 +6,22 @@ function Form() {
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
-    email: ""
+    email: "",
+    course: ""
   });
 
   const [errors, setErrors] = useState({
     name: "",
     contact: "",
-    email: ""
+    email: "",
+    course: ""
   });
 
   const navigate = useNavigate();
 
   function validate() {
     let valid = true;
-    const newErrors = { name: "", contact: "", email: "" };
+    const newErrors = { name: "", contact: "", email: "", course: "" };
 
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!nameRegex.test(formData.name)) {
@@ -36,6 +38,11 @@ function Form() {
     const phoneRegex = /^(07|01)\d{8}$/;
     if (!phoneRegex.test(formData.contact)) {
       newErrors.contact = "Phone must start with 07 or 01 and have 10 digits";
+      valid = false;
+    }
+
+    if (formData.course.trim() === "") {
+      newErrors.course = "Course field cannot be empty";
       valid = false;
     }
 
@@ -66,23 +73,55 @@ function Form() {
         name: formData.name,
         phone: formData.contact,
         email: formData.email,
+        course: formData.course,
         fee: "0",
-        image: "./images/gorg.jpg" 
+        image: "./images/gorg.jpg"
       })
     })
       .then((res) => res.json())
       .then(() => {
-        setFormData({ name: "", contact: "", email: "" });
+        setFormData({ name: "", contact: "", email: "", course: "" });
         navigate("/");
       })
       .catch((err) => console.error("Error submitting form:", err));
   }
 
+  const courseOptions = [
+    "(MEng) Aerospace Engineering",
+    "(MEng) Mechanical Engineering",
+    "(MEng) Civil Engineering",
+    "(MEng) Electrical Engineering",
+    "(BEng) Engineering (Undergraduate)",
+    "(BSc) Computer Science",
+    "(BSc) Data Science",
+    "(BSc) Information Technology",
+    "(BA) Political Science",
+    "(BA) Journalism",
+    "(LLB) Law",
+    "(BBA) Business Administration",
+    "(BArch) Architecture",
+    "(MBBS) Medicine",
+    "(BNurs) Nursing",
+    "(BFin) Finance",
+  ];
+
   return (
     <>
       <NavBar />
-      <form className="form-wrapper" onSubmit={handleSubmit} >
-      <h2 className="form-heading">STUDENT REGISTRATION FORM</h2>
+      <form
+        className="form-wrapper"
+        onSubmit={handleSubmit}
+        style={{
+          padding: "20px",
+          borderRadius: "10px",
+          backgroundImage: "url('https://www.e-architect.com/wp-content/uploads/2017/04/oastler-building-university-of-huddersfield-h280417-3.jpg')", 
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          color: "white"
+        }}
+      >
+        <h2 className="form-heading">HAMPTON UNIVERSITY STUDENT APPLICATION FORM</h2>
+
         <label className="form-heading">NAME:</label>
         <input
           type="text"
@@ -98,7 +137,7 @@ function Form() {
         <input
           type="text"
           name="contact"
-          placeholder="07** *** ****"
+          placeholder="07** *** ***"
           value={formData.contact}
           onChange={handleChange}
           className="styled-form input"
@@ -115,6 +154,22 @@ function Form() {
           className="styled-form input"
         />
         {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+
+        <label className="form-heading">COURSE:</label>
+        <select
+          name="course"
+          value={formData.course}
+          onChange={handleChange}
+          className="styled-form input"
+        >
+          <option value="">Select a course</option>
+          {courseOptions.map((course, index) => (
+            <option key={index} value={course}>
+              {course}
+            </option>
+          ))}
+        </select>
+        {errors.course && <p style={{ color: "red" }}>{errors.course}</p>}
 
         <br /><br /><br />
         <button type="submit" className="bw-btn">SUBMIT</button>
