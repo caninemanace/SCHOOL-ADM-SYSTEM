@@ -18,13 +18,13 @@ function Housing() {
   });
 
   useEffect(() => {
-    // Fetch students for the dropdown
+    
     fetch("http://localhost:3000/students")
       .then((res) => res.json())
       .then((data) => setStudents(data))
       .catch((err) => console.error("Error fetching students:", err));
 
-    // Fetch housing applications
+    
     fetch("http://localhost:3000/housing")
       .then((res) => res.json())
       .then((data) => setHousingApplications(data))
@@ -42,7 +42,6 @@ function Housing() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if the student has already applied
     const existingApplication = housingApplications.find(
       (application) => application.studentId === formData.studentId
     );
@@ -51,12 +50,12 @@ function Housing() {
       return;
     }
 
-    // Update house capacity
+   
     const updatedHouses = { ...houses };
     updatedHouses[formData.house].capacity -= 1;
     setHouses(updatedHouses);
 
-    // Submit housing application
+   
     fetch("http://localhost:3000/housing", {
       method: "POST",
       headers: {
@@ -73,12 +72,12 @@ function Housing() {
   };
 
   const handleRemoveApplication = (id, house) => {
-    // Update house capacity
+    
     const updatedHouses = { ...houses };
     updatedHouses[house].capacity += 1;
     setHouses(updatedHouses);
 
-    // Remove application
+    
     fetch(`http://localhost:3000/housing/${id}`, {
       method: "DELETE",
     })

@@ -9,7 +9,7 @@ function Form() {
     email: "",
     fee: "",
     image: "",
-    course: "" // Add course field
+    course: "" 
   });
 
   const navigate = useNavigate();
