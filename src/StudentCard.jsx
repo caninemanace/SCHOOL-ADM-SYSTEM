@@ -9,7 +9,8 @@ function StudentCard({ students, onDelete, onEdit }) {
           <td>{student.name}</td>
           <td>{student.contact}</td>
           <td>{student.email}</td>
-          <td>{student.fee}</td>
+          <td>{student.course}</td>
+          <td>{student.fee}</td>     
           <td>
             <button className="bw-btn" onClick={() => onEdit(student)}>Edit</button>
             <button className="bw-btn" onClick={() => onDelete(student.id)}>Delete</button>
