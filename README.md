@@ -1,12 +1,52 @@
-# React + Vite
+### README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## School Admission System
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A web-based application for managing student admissions and housing applications.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Features
+
+- **Student Management:** Add, edit, delete, and view student details.
+- **Search & Sort:** Search by name/course and sort by admission fee.
+- **Housing Management:** Apply for housing and manage applications.
+- **Responsive Design:** Professional UI with a gray, white, and black theme.
+
+---
+
+### Technologies Used
+
+- **Frontend:** React.js, CSS
+- **Backend:** JSON Server (mock API)
+
+---
+
+
+
+### Usage
+
+1. **Add Students:** Use the form to add student details.
+2. **Manage Students:** View, edit, or delete students in the table.
+3. **Housing Applications:** Apply for housing and view applications.
+
+---
+
+### API Endpoints
+
+- `GET /students` - Fetch all students.
+- `POST /students` - Add a new student.
+- `PUT /students/:id` - Update a student.
+- `DELETE /students/:id` - Delete a student.
+
+---
+
+### License
+
+This project is licensed under the MIT License.
+
+--- 
+
+You can now copy and paste this directly into your README.md file!
