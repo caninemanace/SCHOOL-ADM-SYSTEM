@@ -8,6 +8,87 @@
       "fee": "1234545",
       "image": "https://media.istockphoto.com/id/1373258176/photo/little-african-american-school-boy-raising-hands-up-with-excitement-during-home-distance.jpg?s=612x612&w=0&k=20&c=ovy60H9_Ga6fKfAc2sL5BywZ_r0NiM6oPpC9YRAhcAM=",
       "course": "Computer Science"
+    },
+    {
+      "id": "0e3e",
+      "name": "CANINEMANACE",
+      "contact": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "112345",
+      "image": "https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=",
+      "course": "Economics"
+    },
+    {
+      "id": "5d5b",
+      "name": "CANINEMANACE",
+      "contact": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "12345",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/911/382/small_2x/happy-student-boy-with-books-isolated-free-photo.jpg",
+      "course": "Environmental Science"
+    },
+    {
+      "id": "eb9b",
+      "name": "Murima Makwetu",
+      "contact": "0712345678",
+      "email": "tevin1234@gmail.com",
+      "fee": "12345",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/911/382/small_2x/happy-student-boy-with-books-isolated-free-photo.jpg",
+      "course": "Artificial Intelligence"
+    },
+    {
+      "id": "0be5",
+      "name": "CANINEMANACE",
+      "contact": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "12345",
+      "image": "https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=",
+      "course": "Medicine"
+    },
+    {
+      "id": "9304",
+      "name": "Murima Makwetu",
+      "contact": "0712345678",
+      "email": "eddie.njoroge2306@gmail.com",
+      "fee": "123456",
+      "image": "https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=",
+      "course": "Nursing"
+    },
+    {
+      "id": "ac0f",
+      "name": "Eddie Karuiki",
+      "contact": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "123455",
+      "image": "https://media.istockphoto.com/id/1373258176/photo/little-african-american-school-boy-raising-hands-up-with-excitement-during-home-distance.jpg?s=612x612&w=0&k=20&c=ovy60H9_Ga6fKfAc2sL5BywZ_r0NiM6oPpC9YRAhcAM=",
+      "course": "Business Administration"
+    },
+    {
+      "id": "4f82",
+      "name": "Murima Makwetu",
+      "contact": "0759502229",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "1223433",
+      "image": "https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=",
+      "course": "Civil Engineering"
+    },
+    {
+      "id": "ea1c",
+      "name": "Murima Makwetu",
+      "contact": "0712345678",
+      "email": "eddie.njoroge2306@gmail.com",
+      "fee": "12334",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/911/382/small_2x/happy-student-boy-with-books-isolated-free-photo.jpg",
+      "course": "Law"
+    },
+    {
+      "id": "e394",
+      "name": "Eddie Karuiki",
+      "contact": "0712345678",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "12334",
+      "image": "https://media.istockphoto.com/id/1373258176/photo/little-african-american-school-boy-raising-hands-up-with-excitement-during-home-distance.jpg?s=612x612&w=0&k=20&c=ovy60H9_Ga6fKfAc2sL5BywZ_r0NiM6oPpC9YRAhcAM=",
+      "course": "Business Administration"
     }
   ],
   "housing": [
@@ -16,6 +97,13 @@
       "studentId": "42ec",
       "date": "2025-04-17",
       "housingFee": "12334345",
+      "house": "north"
+    },
+    {
+      "id": "1919",
+      "studentId": "eb9b",
+      "date": "2025-04-10",
+      "housingFee": "1233434",
       "house": "north"
     }
   ]

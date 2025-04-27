@@ -44,7 +44,7 @@ function Form() {
     <>
       <NavBar />
       <form className="form-wrapper" onSubmit={handleSubmit}>
-        <h2 className="form-heading">STUDENT REGISTRATION FORM</h2>
+        <h2 className="form-heading">HAMPTON UNIVERSITY REGISTRATION FORM</h2> <hr /><hr />
         
         <label className="form-heading">NAME:</label>
         <input

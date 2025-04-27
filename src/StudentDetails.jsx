@@ -19,7 +19,7 @@ function StudentDetails() {
   }
 
   const isFeeComplete = student.fee >= admissionFee;
-  const balance = student.fee - admissionFee; // Calculate balance or excess
+  const balance = student.fee - admissionFee; 
 
   const handleSendEmail = () => {
     alert(`Email sent to ${student.email} reminding them to complete their school fees.`);
