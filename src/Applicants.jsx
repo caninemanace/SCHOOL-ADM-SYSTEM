@@ -10,34 +10,10 @@ function Applicants() {
   const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
-<<<<<<< HEAD
     fetch("http://localhost:3000/students")
       .then((res) => res.json())
       .then((data) => setStudents(data))
       .catch((err) => console.error("Error fetching students:", err));
-=======
-    const baseFee = 200000;
-    const minFee = 4000;
-
-    const fetchAndUpdateFees = () => {
-      fetch("http://localhost:3000/students")
-        .then((res) => res.json())
-        .then((data) => {
-          const updatedStudents = data.map(student => {
-            const reduction = Math.floor(Math.random() * (baseFee - minFee));
-            const newFee = baseFee - reduction;
-            return { ...student, fee: newFee };
-          });
-          setStudents(updatedStudents);
-        })
-        .catch((err) => console.error("Error fetching students:", err));
-    };
-
-    fetchAndUpdateFees();
-    const interval = setInterval(fetchAndUpdateFees, 30000);
-
-    return () => clearInterval(interval);
->>>>>>> Applicant-Filter/Search
   }, []);
 
   const handleDelete = (id) => {
