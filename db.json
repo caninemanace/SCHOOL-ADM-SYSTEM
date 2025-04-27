@@ -1,140 +1,113 @@
 {
   "students": [
     {
-      "id": "af21",
-      "name": "Tevin Rutere",
-      "phone": "0712345678",
-      "email": "tevin1234@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "id": "c893",
+      "name": "Eddie Karuiki",
+      "contact": "0759502229",
+      "email": "eddie.njoroge@student.moringaschool.com",
+      "fee": "12345",
+      "image": "https://media.gettyimages.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=612x612&w=gi&k=20&c=SpIONFFVzrC2OpgxeC2GEpUs0mDQxjw8xn9Z-gfGs5c="
     },
     {
-      "id": "9abd",
+      "id": "a824",
+      "name": "CANINEMANACE",
+      "contact": "0712345678",
+      "email": "joemwangi123@gmail.com",
+      "fee": "123456",
+      "image": "https://media.istockphoto.com/id/1373258176/photo/little-african-american-school-boy-raising-hands-up-with-excitement-during-home-distance.jpg?s=612x612&w=0&k=20&c=ovy60H9_Ga6fKfAc2sL5BywZ_r0NiM6oPpC9YRAhcAM="
+    },
+    {
+      "id": "8592",
       "name": "Joe Mwangi",
-      "phone": "0712345678",
+      "contact": "0712345678",
       "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "fee": "123456",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/911/382/small_2x/happy-student-boy-with-books-isolated-free-photo.jpg"
     },
     {
-      "id": "d26d",
-      "name": "Mwanafunzi Wanafunzi",
-      "phone": "0712345678",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "d08f",
-      "name": "Kariuki Kamau",
-      "phone": "0759502229",
-      "email": "tevin1234@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "e132",
+      "id": "2145",
       "name": "Murima Makwetu",
-      "phone": "0712345678",
-      "email": "eddie.njoroge@student.moringaschool.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "contact": "0759502229",
+      "email": "tevin1234@gmail.com",
+      "fee": "1234",
+      "image": "https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw="
     },
     {
-      "id": "25e0",
+      "id": "b601",
       "name": "Kristina Mwetu",
-      "phone": "0712345678",
+      "contact": "0759502229",
       "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "fee": "123",
+      "image": "https://img.freepik.com/free-photo/smiling-woman-with-afro-posing-pink-sweater_273609-31988.jpg"
     },
     {
-      "id": "9a64",
-      "name": "Joe Mwangi",
-      "phone": "0712345678",
-      "email": "eddie.njoroge@student.moringaschool.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "801f",
+      "id": "71fc",
       "name": "CANINEMANACE",
-      "phone": "0759502229",
+      "contact": "0712345678",
       "email": "eddie.njoroge@student.moringaschool.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "fee": "12356",
+      "image": "https://www.shutterstock.com/shutterstock/photos/2071252046/display_1500/stock-photo-portrait-of-cheerful-male-international-indian-student-with-backpack-learning-accessories-standing-2071252046.jpg"
     },
     {
-      "id": "8174",
-      "name": "Eddie Karuiki",
-      "phone": "0759502229",
-      "email": "eddie.njoroge2306@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "acad",
-      "name": "Joe Mwangi",
-      "phone": "0759502229",
+      "id": "f977",
+      "name": "Tevin Rutere",
+      "contact": "0712345678",
       "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "fee": "123456",
+      "image": "https://media.gettyimages.com/id/1338912354/photo/young-student.jpg?s=612x612&w=gi&k=20&c=hw0paYHsr3re9bigIh2mCnK_HO0P6utaQ4poPuEQzrA="
     },
     {
-      "id": "0194",
-      "name": "Eddie Karuiki",
-      "phone": "0712345678",
+      "id": "6096",
+      "name": "Murima Makwetu",
+      "contact": "0759502229",
+      "email": "joemwangi123@gmail.com",
+      "fee": "123456",
+      "image": "https://media.gettyimages.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=612x612&w=gi&k=20&c=SpIONFFVzrC2OpgxeC2GEpUs0mDQxjw8xn9Z-gfGs5c="
+    },
+    {
+      "id": "c282",
+      "name": "Murima Makwetu",
+      "contact": "0712345678",
       "email": "eddie.njoroge@student.moringaschool.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "fee": "1234",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/026/911/382/small_2x/happy-student-boy-with-books-isolated-free-photo.jpg"
+    }
+  ],
+  "housing": [
+    {
+      "id": "479a",
+      "studentId": "a824",
+      "date": "2025-04-26",
+      "housingFee": 40000,
+      "house": "west"
     },
     {
-      "id": "11a8",
-      "name": "Eddie Karuiki",
-      "phone": "0759502229",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "id": "e6ec",
+      "studentId": "b601",
+      "date": "2025-04-10",
+      "housingFee": 40000,
+      "house": "north"
     },
     {
-      "id": "b858",
-      "name": "Eddie Karuiki",
-      "phone": "0759502229",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "id": "9c06",
+      "studentId": "c893",
+      "date": "2025-04-30",
+      "housingFee": 40000,
+      "house": "south"
     },
     {
-      "id": "72a6",
-      "name": "Eddie Karuiki",
-      "phone": "0759502229",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "id": "7732",
+      "studentId": "f977",
+      "date": "2025-04-05",
+      "housingFee": "300",
+      "house": "south"
     },
     {
-      "id": "5fce",
-      "name": "Joe Mwangi",
-      "phone": "0759502229",
-      "email": "eddie.njoroge2306@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "db77",
-      "name": "CANINEMANACE",
-      "phone": "0712345678",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
-    },
-    {
-      "id": "94a7",
-      "name": "Eddie Maxwell",
-      "phone": "0712345678",
-      "email": "joemwangi123@gmail.com",
-      "fee": "0",
-      "image": "./images/gorg.jpg"
+      "id": "49be",
+      "studentId": "c893",
+      "date": "2025-04-08",
+      "housingFee": "20000",
+      "house": "north"
     }
   ]
 }

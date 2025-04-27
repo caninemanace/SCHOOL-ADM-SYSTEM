@@ -6,83 +6,45 @@ function Form() {
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
-    email: ""
-  });
-
-  const [errors, setErrors] = useState({
-    name: "",
-    contact: "",
-    email: ""
+    email: "",
+    fee: "",
+    image: ""
   });
 
   const navigate = useNavigate();
 
-  function validate() {
-    let valid = true;
-    const newErrors = { name: "", contact: "", email: "" };
-
-    const nameRegex = /^[A-Za-z\s]+$/;
-    if (!nameRegex.test(formData.name)) {
-      newErrors.name = "Name must only contain letters and spaces";
-      valid = false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Invalid email format";
-      valid = false;
-    }
-
-    const phoneRegex = /^(07|01)\d{8}$/;
-    if (!phoneRegex.test(formData.contact)) {
-      newErrors.contact = "Phone must start with 07 or 01 and have 10 digits";
-      valid = false;
-    }
-
-    setErrors(newErrors);
-    return valid;
-  }
-
-  function handleChange(e) {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
-    setErrors((prev) => ({ ...prev, [name]: "" }));
-  }
+  };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!validate()) return;
 
     fetch("http://localhost:3000/students", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        name: formData.name,
-        phone: formData.contact,
-        email: formData.email,
-        fee: "0",
-        image: "./images/gorg.jpg" 
-      })
+      body: JSON.stringify(formData)
     })
       .then((res) => res.json())
       .then(() => {
-        setFormData({ name: "", contact: "", email: "" });
+        setFormData({ name: "", contact: "", email: "", fee: "", image: "" });
         navigate("/");
       })
       .catch((err) => console.error("Error submitting form:", err));
-  }
+  };
 
   return (
     <>
       <NavBar />
-      <form className="form-wrapper" onSubmit={handleSubmit} >
-      <h2 className="form-heading">STUDENT REGISTRATION FORM</h2>
+      <form className="form-wrapper" onSubmit={handleSubmit}>
+        <h2 className="form-heading">STUDENT REGISTRATION FORM</h2>
+        
         <label className="form-heading">NAME:</label>
         <input
           type="text"
@@ -92,7 +54,6 @@ function Form() {
           onChange={handleChange}
           className="styled-form input"
         />
-        {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
 
         <label className="form-heading">CONTACT:</label>
         <input
@@ -103,7 +64,6 @@ function Form() {
           onChange={handleChange}
           className="styled-form input"
         />
-        {errors.contact && <p style={{ color: "red" }}>{errors.contact}</p>}
 
         <label className="form-heading">EMAIL:</label>
         <input
@@ -114,9 +74,27 @@ function Form() {
           onChange={handleChange}
           className="styled-form input"
         />
-        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
 
-        <br /><br /><br />
+        <label className="form-heading">FEE PAID:</label>
+        <input
+          type="number"
+          name="fee"
+          placeholder="Enter fee paid"
+          value={formData.fee}
+          onChange={handleChange}
+          className="styled-form input"
+        />
+
+        <label className="form-heading">IMAGE URL:</label>
+        <input
+          type="text"
+          name="image"
+          placeholder="Enter image URL"
+          value={formData.image}
+          onChange={handleChange}
+          className="styled-form input"
+        />
+
         <button type="submit" className="bw-btn">SUBMIT</button>
       </form>
     </>

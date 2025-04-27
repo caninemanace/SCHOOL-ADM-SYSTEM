@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import './App.css';
-import NavBar from './NavBar';
-import StudentCard from './StudentCard';
+import { useState, useEffect } from "react";
+import "./App.css";
+import NavBar from "./NavBar";
+import StudentCard from "./StudentCard";
 
 function Applicants() {
   const [students, setStudents] = useState([]);
@@ -10,27 +10,10 @@ function Applicants() {
   const [sortOrder, setSortOrder] = useState(""); 
 
   useEffect(() => {
-    const baseFee = 200000;
-    const minFee = 4000;
-
-    const fetchAndUpdateFees = () => {
-      fetch("http://localhost:3000/students")
-        .then((res) => res.json())
-        .then((data) => {
-          const updatedStudents = data.map(student => {
-            const reduction = Math.floor(Math.random() * (baseFee - minFee));
-            const newFee = baseFee - reduction;
-            return { ...student, fee: newFee };
-          });
-          setStudents(updatedStudents);
-        })
-        .catch((err) => console.error("Error fetching students:", err));
-    };
-
-    fetchAndUpdateFees(); // Initial fetch
-    const interval = setInterval(fetchAndUpdateFees, 30000); // Refresh every 30 sec
-
-    return () => clearInterval(interval); // Clean up
+    fetch("http://localhost:3000/students")
+      .then((res) => res.json())
+      .then((data) => setStudents(data))
+      .catch((err) => console.error("Error fetching students:", err));
   }, []);
 
   const handleDelete = (id) => {
@@ -58,10 +41,7 @@ function Applicants() {
       },
       body: JSON.stringify(updatedStudent),
     })
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to update");
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setStudents((prevStudents) =>
           prevStudents.map((student) =>
@@ -134,7 +114,7 @@ function Applicants() {
               <tr>
                 <th>Admission No</th>
                 <th>Name</th>
-                <th>Phone</th>
+                <th>Contact</th>
                 <th>Email</th>
                 <th>ADM-Fee (ksh)</th>
                 <th>Action</th>
@@ -187,11 +167,11 @@ function EditForm({ student, onUpdate, onCancel }) {
         />
       </div>
       <div>
-        <label>Phone:</label>
+        <label>Contact:</label>
         <input
           type="text"
-          name="phone"
-          value={formData.phone}
+          name="contact"
+          value={formData.contact}
           onChange={handleChange}
         />
       </div>
@@ -210,6 +190,15 @@ function EditForm({ student, onUpdate, onCancel }) {
           type="number"
           name="fee"
           value={formData.fee}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>Image URL:</label>
+        <input
+          type="text"
+          name="image"
+          value={formData.image}
           onChange={handleChange}
         />
       </div>
